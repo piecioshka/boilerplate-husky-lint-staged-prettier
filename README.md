@@ -1,4 +1,6 @@
-# test-prettier
+# boilerplate-husky-lint-staged-prettier
+
+:fork_and_knife: Setup code formatter as a pre-commit Git hooks task only for changed files
 
 ## Goals
 
@@ -12,7 +14,7 @@
 
     ```json
     {
-        "name": "test-prettier"
+        "name": "boilerplate-husky-lint-staged-prettier"
     }
     ```
 
@@ -42,5 +44,5 @@
 [husky]: https://github.com/typicode/husky
 [lint-staged]: https://github.com/okonet/lint-staged
 [prettier]: https://github.com/prettier/prettier
-[lint-staged.config.js]: https://github.com/piecioshka/test-prettier/blob/master/lint-staged.config.js
-[prettier.config.js]: https://github.com/piecioshka/test-prettier/blob/master/prettier.config.js
+[lint-staged.config.js]: https://github.com/piecioshka/boilerplate-husky-lint-staged-prettier/blob/master/lint-staged.config.js
+[prettier.config.js]: https://github.com/piecioshka/boilerplate-husky-lint-staged-prettier/blob/master/prettier.config.js

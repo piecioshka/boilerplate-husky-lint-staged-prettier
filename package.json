@@ -1,5 +1,5 @@
 {
-    "name": "test-prettier",
+    "name": "boilerplate-husky-lint-staged-prettier",
     "devDependencies": {
         "husky": "^4.2.3",
         "lint-staged": "^10.1.2",
