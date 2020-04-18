@@ -32,14 +32,30 @@
         "hooks": {
             "pre-commit": "lint-staged"
         }
+    },
+    "lint-staged": {
+        "*.md": "prettier --write"
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "jsxBracketSameLine": false,
+        "arrowParens": "avoid",
+        "proseWrap": "never"
     }
     ...
     ```
 
-4. Create config files by coping with this template:
+    Alternate option will be create files for each configuration:
 
-    - [lint-staged.config.js]
-    - [prettier.config.js]
+    - [husky.config.js](https://github.com/typicode/husky#guides)
+    - [prettier.config.js](https://prettier.io/docs/en/configuration.html)
+    - [lint-staged.config.js](https://github.com/okonet/lint-staged#filtering-files)
+
+4. Make a commit (using Git of course) and see how changed files look like 🎊
 
 [husky]: https://github.com/typicode/husky
 [lint-staged]: https://github.com/okonet/lint-staged
