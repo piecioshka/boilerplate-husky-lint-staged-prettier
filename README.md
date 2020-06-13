@@ -1,6 +1,6 @@
 # boilerplate-husky-lint-staged-prettier
 
-:fork_and_knife: Setup code formatter as a pre-commit Git hooks task only for changed files
+:fork_and_knife: Setup code formatter as a pre-commit Git hooks task only for changes
 
 ## Goals
 
