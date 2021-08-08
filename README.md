@@ -28,10 +28,10 @@
 
     ```json
     ...
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+    "scripts": {
+        ...
+        "prepare": "husky install",
+        "pre-commit": "lint-staged"
     },
     "lint-staged": {
         "*.md": "prettier --write"
@@ -49,13 +49,26 @@
 
     Alternate option will be create files for each configuration:
 
-    - [husky.config.js](https://github.com/typicode/husky#guides)
-    - [prettier.config.js](https://prettier.io/docs/en/configuration.html)
     - [lint-staged.config.js](https://github.com/okonet/lint-staged#filtering-files)
+    - [prettier.config.js](https://prettier.io/docs/en/configuration.html)
 
-4. Make a commit (using Git of course) and see how changed files look like 🎊
+4. Husky
 
-[husky]: https://github.com/typicode/husky
+    Husky was evolved and introduce new way to setup Git hooks.
+
+    - In this article, you can read about dropping `husky.config.js` file:
+        - <https://blog.typicode.com/husky-git-hooks-javascript-config/>
+    - There is a project to reduce overhead to setup Husky
+        - <https://www.npmjs.com/package/husky-init>
+
+    ```bash
+    npx husky-init && npm install
+    npx husky add .husky/pre-commit "npm run pre-commit"
+    ```
+
+5. Make a commit (using Git of course) and see how changed files look like 🎊
+
+[husky]: https://typicode.github.io/husky/
 [lint-staged]: https://github.com/okonet/lint-staged
 [prettier]: https://github.com/prettier/prettier
 [lint-staged.config.js]: https://github.com/piecioshka/boilerplate-husky-lint-staged-prettier/blob/master/lint-staged.config.js

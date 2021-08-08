@@ -1,14 +1,13 @@
 {
     "name": "boilerplate-husky-lint-staged-prettier",
     "devDependencies": {
-        "husky": "^7.0.1",
+        "husky": "^7.0.0",
         "lint-staged": "^11.1.2",
         "prettier": "^2.3.2"
     },
-    "husky": {
-        "hooks": {
-            "pre-commit": "lint-staged"
-        }
+    "scripts": {
+        "prepare": "husky install",
+        "pre-commit": "lint-staged"
     },
     "lint-staged": {
         "*.md": "prettier --write"
