@@ -1,9 +1,9 @@
 {
     "name": "boilerplate-husky-lint-staged-prettier",
     "devDependencies": {
-        "husky": "^4.2.3",
-        "lint-staged": "^10.1.2",
-        "prettier": "^2.0.4"
+        "husky": "^7.0.1",
+        "lint-staged": "^11.1.2",
+        "prettier": "^2.3.2"
     },
     "husky": {
         "hooks": {
