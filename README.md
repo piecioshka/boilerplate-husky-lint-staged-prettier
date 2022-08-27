@@ -38,10 +38,10 @@
     },
     "prettier": {
         "trailingComma": "all",
-        "tabWidth": 4,
+        "tabWidth": 2,
         "semi": true,
         "singleQuote": true,
-        "arrowParens": "avoid",
+        "arrowParens": "always",
         "proseWrap": "never"
     }
     ...
