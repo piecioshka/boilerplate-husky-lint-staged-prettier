@@ -1,23 +1,37 @@
 {
-    "name": "boilerplate-husky-lint-staged-prettier",
-    "devDependencies": {
-        "husky": "^9.1.7",
-        "lint-staged": "^15.2.10",
-        "prettier": "^3.4.1"
-    },
-    "scripts": {
-        "prepare": "husky install",
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.md": "prettier --write"
-    },
-    "prettier": {
-        "trailingComma": "all",
-        "tabWidth": 4,
-        "semi": true,
-        "singleQuote": true,
-        "arrowParens": "avoid",
-        "proseWrap": "never"
-    }
+  "private": true,
+  "name": "boilerplate-husky-lint-staged-prettier",
+  "scripts": {
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.4.1"
+  },
+  "lint-staged": {
+    "*.md": "prettier --write"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleAttributePerLine": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  }
 }

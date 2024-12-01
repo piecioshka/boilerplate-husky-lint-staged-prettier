@@ -1,75 +1,67 @@
 # boilerplate-husky-lint-staged-prettier
 
-:fork_and_knife: Setup code formatter as a pre-commit Git hooks task only for changes
+🍴 Setup code formatter as a pre-commit Git hooks task only for changes
 
 ## Goals
 
--   🐶 Use [husky] to set `pre-commit` hooks
--   🧱 Use [lint-staged] to process only changes in files (not whole project)
--   🧬 Use [prettier] to have the same syntax in the whole project
+- 🐶 Use [husky](https://typicode.github.io/husky/) to set `pre-commit` hooks
+- 🧱 Use [lint-staged](https://github.com/lint-staged/lint-staged) to process only changes in files (not whole project)
+- 🧬 Use [prettier](https://github.com/prettier/prettier) to have the consistent syntax in all files
 
-## How to setup in my project? 🎉
+## How to setup them in my project? 🎉
 
 1. Create `package.json`:
 
-    ```json
-    {
-        "name": "boilerplate-husky-lint-staged-prettier"
-    }
-    ```
+   ```json
+   {
+     "name": "boilerplate-husky-lint-staged-prettier"
+   }
+   ```
 
 2. Install deps:
 
-    ```bash
-    npm install -D prettier lint-staged husky
-    ```
+   ```bash
+   npm install -D prettier lint-staged husky
+   ```
 
-3. Insert in `package.json`:
+3. Update `package.json` and add: scripts, lint-staged and prettier configuration:
 
-    ```json
-    ...
-    "scripts": {
-        ...
-        "prepare": "husky install",
-        "pre-commit": "lint-staged"
-    },
-    "lint-staged": {
-        "*.md": "prettier --write"
-    },
-    "prettier": {
-        "trailingComma": "all",
-        "tabWidth": 2,
-        "semi": true,
-        "singleQuote": true,
-        "arrowParens": "always",
-        "proseWrap": "never"
-    }
-    ...
-    ```
+   ```json
+   {
+     "name": "boilerplate-husky-lint-staged-prettier",
+     "scripts": {
+       "prepare": "husky",
+       "pre-commit": "lint-staged"
+     },
+     "lint-staged": {
+       "*.md": "prettier --write"
+     },
+     "prettier": {
+       "arrowParens": "always",
+       "bracketSameLine": false,
+       "bracketSpacing": true,
+       "embeddedLanguageFormatting": "auto",
+       "endOfLine": "lf",
+       "htmlWhitespaceSensitivity": "css",
+       "insertPragma": false,
+       "jsxSingleQuote": false,
+       "printWidth": 80,
+       "proseWrap": "preserve",
+       "quoteProps": "as-needed",
+       "requirePragma": false,
+       "semi": true,
+       "singleAttributePerLine": false,
+       "singleQuote": false,
+       "tabWidth": 2,
+       "trailingComma": "all",
+       "useTabs": false,
+       "vueIndentScriptAndStyle": false
+     }
+   }
+   ```
 
-    Alternate option will be create files for each configuration:
+4. Make a Git commit 🎊
 
-    - [lint-staged.config.js](https://github.com/okonet/lint-staged#filtering-files)
-    - [prettier.config.js](https://prettier.io/docs/en/configuration.html)
+## License
 
-4. Husky
-
-    Husky was evolved and introduce new way to setup Git hooks.
-
-    - In this article, you can read about dropping `husky.config.js` file:
-        - <https://blog.typicode.com/husky-git-hooks-javascript-config/>
-    - There is a project to reduce overhead to setup Husky
-        - <https://www.npmjs.com/package/husky-init>
-
-    ```bash
-    npx husky-init && npm install
-    npx husky add .husky/pre-commit "npm run pre-commit"
-    ```
-
-5. Make a commit (using Git of course) and see how changed files look like 🎊
-
-[husky]: https://typicode.github.io/husky/
-[lint-staged]: https://github.com/okonet/lint-staged
-[prettier]: https://github.com/prettier/prettier
-[lint-staged.config.js]: https://github.com/piecioshka/boilerplate-husky-lint-staged-prettier/blob/master/lint-staged.config.js
-[prettier.config.js]: https://github.com/piecioshka/boilerplate-husky-lint-staged-prettier/blob/master/prettier.config.js
+[The MIT License](https://piecioshka.mit-license.org) @ 2020
