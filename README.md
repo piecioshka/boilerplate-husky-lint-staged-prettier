@@ -10,47 +10,47 @@
 
 ## How to setup them in my project? 🎉
 
-1. Create `package.json`:
+1. Create a `package.json`:
 
-   ```json
-   {
-     "name": "boilerplate-husky-lint-staged-prettier",
-     "scripts": {
-       "prepare": "husky",
-       "pre-commit": "lint-staged"
-     },
-     "lint-staged": {
-       "*.md": "prettier --write"
-     },
-     "prettier": {
-       "arrowParens": "always",
-       "bracketSameLine": false,
-       "bracketSpacing": true,
-       "embeddedLanguageFormatting": "auto",
-       "endOfLine": "lf",
-       "htmlWhitespaceSensitivity": "css",
-       "insertPragma": false,
-       "jsxSingleQuote": false,
-       "printWidth": 80,
-       "proseWrap": "preserve",
-       "quoteProps": "as-needed",
-       "requirePragma": false,
-       "semi": true,
-       "singleAttributePerLine": false,
-       "singleQuote": false,
-       "tabWidth": 2,
-       "trailingComma": "all",
-       "useTabs": false,
-       "vueIndentScriptAndStyle": false
-     }
-   }
-   ```
+```json
+{
+  "name": "boilerplate-husky-lint-staged-prettier",
+  "scripts": {
+    "prepare": "husky",
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.md": "prettier --write"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "bracketSameLine": false,
+    "bracketSpacing": true,
+    "embeddedLanguageFormatting": "auto",
+    "endOfLine": "lf",
+    "htmlWhitespaceSensitivity": "css",
+    "insertPragma": false,
+    "jsxSingleQuote": false,
+    "printWidth": 80,
+    "proseWrap": "preserve",
+    "quoteProps": "as-needed",
+    "requirePragma": false,
+    "semi": true,
+    "singleAttributePerLine": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all",
+    "useTabs": false,
+    "vueIndentScriptAndStyle": false
+  }
+}
+```
 
-2. Install deps:
+2. Install dependencies:
 
-   ```bash
-   npm install -D prettier lint-staged husky
-   ```
+```bash
+npm install -D prettier lint-staged husky
+```
 
 3. Setup Husky
 
@@ -58,11 +58,11 @@
 npx husky init
 ```
 
-4. Edit `.husky/pre-commit` and replace with:
+4. Edit `.husky/pre-commit` and add:
 
-   ```bash
-   npm run pre-commit
-   ```
+```bash
+npm run pre-commit
+```
 
 5. Make a Git commit 🎊
 
