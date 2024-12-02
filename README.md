@@ -14,20 +14,6 @@
 
    ```json
    {
-     "name": "boilerplate-husky-lint-staged-prettier"
-   }
-   ```
-
-2. Install deps:
-
-   ```bash
-   npm install -D prettier lint-staged husky
-   ```
-
-3. Update `package.json` and add: scripts, lint-staged and prettier configuration:
-
-   ```json
-   {
      "name": "boilerplate-husky-lint-staged-prettier",
      "scripts": {
        "prepare": "husky",
@@ -60,7 +46,25 @@
    }
    ```
 
-4. Make a Git commit 🎊
+2. Install deps:
+
+   ```bash
+   npm install -D prettier lint-staged husky
+   ```
+
+3. Setup Husky
+
+```bash
+npx husky init
+```
+
+4. Edit `.husky/pre-commit` and replace with:
+
+   ```bash
+   npm run pre-commit
+   ```
+
+5. Make a Git commit 🎊
 
 ## License
 
