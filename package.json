@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "boilerplate-husky-lint-staged-prettier",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky",
     "pre-commit": "lint-staged"
